@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{1E83C565-AEC6-4844-8F24-9BB172E8A67A}</ProjectGuid>
+    <ProjectGuid>{B738A10E-30AD-4154-BEDC-13F6DDC91B8E}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>WebDeveloper.DataAccess</RootNamespace>
@@ -49,13 +49,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BaseDataAccess.cs" />
     <Compile Include="ClientData.cs" />
+    <Compile Include="IDataAccess.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="WebContextDb.cs" />
+    <Compile Include="WebDeveloperInitializer.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\WebDeveloper.Model\WebDeveloper.Model.csproj">
-      <Project>{444b6119-054c-45e8-b7a1-7e0b9f63417a}</Project>
+      <Project>{799ec88d-c8f0-47bc-a707-9c74023e17a5}</Project>
       <Name>WebDeveloper.Model</Name>
     </ProjectReference>
   </ItemGroup>
