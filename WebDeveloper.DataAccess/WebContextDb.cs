@@ -17,6 +17,8 @@ namespace WebDeveloper.DataAccess
         }
         public DbSet<Client> Clients { get; set; }
 
+        public DbSet<Product> Products { get; set; }
+
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
