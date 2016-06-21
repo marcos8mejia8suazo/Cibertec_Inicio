@@ -14,11 +14,11 @@ namespace WebDeveloper.DataAccess
         {
             var clients = new List<Client>
             {
-                new Client {Name="Jose", LastName="Perez" },
-                new Client {Name="Juan", LastName="Perez" },
-                new Client {Name="Juanelo", LastName="Perez" },
-                new Client {Name="Alan", LastName="Perez" },
-                new Client {Name="Pedro", LastName="Perez" },
+                new Client {Name="Jose", LastName="Perez", DateCreation=DateTime.Now },
+                new Client {Name="Juan", LastName="Perez" ,DateCreation=DateTime.Now},
+                new Client {Name="Juanelo", LastName="Perez",DateCreation=DateTime.Now },
+                new Client {Name="Alan", LastName="Perez",DateCreation=DateTime.Now },
+                new Client {Name="Pedro", LastName="Perez",DateCreation=DateTime.Now },
             };
 
             var products = new List<Product>
