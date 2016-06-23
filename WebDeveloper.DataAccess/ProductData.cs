@@ -7,12 +7,22 @@ namespace WebDeveloper.DataAccess
 {
     public class ProductData : BaseDataAccess<Product>
     {
-        public Product GetProduct(int id)
+        //public Product GetProduct(int id)
+        //{
+        //    using (var dbContext = new WebContextDb())
+        //    {
+        //        return dbContext.Products.FirstOrDefault(x => x.ID == id);
+        //    }
+        //}
+
+        public List<Product> GetFakeProducts()
         {
-            using (var dbContext = new WebContextDb())
+            return new List<Product>
             {
-                return dbContext.Products.FirstOrDefault(x => x.ID == id);
-            }
+                new Product {ID=1, Description="Cristal", Price=3,CreateDate=null},
+                new Product {ID=2, Description="Pilse", Price=0, CreateDate=DateTime.Now},
+                new Product {ID=3, Description="Cuzqueña", Price=5, CreateDate=null}
+            };
         }
     }
 }

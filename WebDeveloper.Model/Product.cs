@@ -25,5 +25,7 @@ namespace WebDeveloper.Model
         [Display(Description = "Amount in stock")]
         [Required(ErrorMessage = "This field is required")]
         public int Stock { get; set; }
+
+        public DateTime? CreateDate { get; set; }
     }
 }
