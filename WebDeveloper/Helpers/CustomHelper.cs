@@ -73,7 +73,7 @@ namespace WebDeveloper.Helpers
 
         private static string GetDateHtml(DateTime? date)
         {
-            return date.HasValue ? $"<span>{date.Value.ToString("dd-mm-yyyy")}</span>";
+            return date.HasValue ? "<span>No Time</span>" : $"<span>{date.Value.ToString("dd-mm-yyyy")}</span>";
         }
     }
 }
