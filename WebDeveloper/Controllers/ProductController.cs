@@ -10,8 +10,14 @@ namespace WebDeveloper.Controllers
 {
     public class ProductController : Controller
     {
-        public ProductData _product = new ProductData();
+        //public ProductData _product = new ProductData();
         // GET: Product
+        private IDataAccess<Product> _product;
+
+        public ProductController(IDataAccess<Product> product)
+        {
+            _product = product;
+        }
         public ActionResult Index()
         {
             var product = new ProductData();

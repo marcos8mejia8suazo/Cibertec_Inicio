@@ -11,13 +11,18 @@ namespace WebDeveloper.Controllers
     public class ClientController : Controller
     {
 
-        private ClientData _client = new ClientData();
-        
+        //private ClientData _client;
+
         // GET: Client
+        private IDataAccess<Client> _client;
+        public ClientController(IDataAccess<Client> client)
+        {
+            _client = client;
+        }
         public ActionResult Index()
         {
-            var client = new ClientData();
-            return View(client.GetList());
+            
+            return View(_client.GetList());
         }
 
         public ActionResult Create()
@@ -36,14 +41,14 @@ namespace WebDeveloper.Controllers
             return View();
         }
 
-        public ActionResult Delete(int id)
-        {
-            var client = _client.GetClient(id);
-            if(client == null)
-            {
-                RedirectToAction("Index");
-            }return View(client);
-        }
+        //public ActionResult Delete(int id)
+        //{
+        //    var client = _client.GetClient(id);
+        //    if(client == null)
+        //    {
+        //        RedirectToAction("Index");
+        //    }return View(client);
+        //}
 
         [HttpPost]
         public ActionResult Delete(Client client)
