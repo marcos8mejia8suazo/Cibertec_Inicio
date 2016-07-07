@@ -10,9 +10,8 @@ namespace WebDeveloper
     {
         public void Configuration(IAppBuilder app)
         {
-            //ConfigureAuth(app);
+            ConfigureAuth(app);
             var container = new ServiceContainer();
-            //conatainer.Register<IDataAccess<Client>, ClientData>();
             container.RegisterAssembly(Assembly.GetExecutingAssembly());
             container.RegisterAssembly("WebDeveloper.*.dll");
             container.RegisterControllers();
